@@ -1,0 +1,9 @@
+pdf2image
+streamlit
+pandas
+requests
+cv2
+numpy
+PIL
+warnings
+io
