@@ -1,0 +1,8 @@
+[theme]
+base = "dark"
+backgroundColor = "#191b37"
+secondaryBackgroundColor = "#272945"
+textColor = "#ffffff"
+
+[global]
+dataFrameSerialization = "arrow"
