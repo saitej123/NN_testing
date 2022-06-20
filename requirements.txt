@@ -4,6 +4,6 @@ streamlit
 pandas
 opencv-python
 numpy
-pillow
+Pillow
 warnings
 io
