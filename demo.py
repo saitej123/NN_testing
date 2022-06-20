@@ -53,8 +53,7 @@ if uploaded_file is not None:
         with col2:
             
             chk= st.checkbox("Show Results")
-            st.text("")
-            st.text("")
+            
             data = {'file': open("input.jpg", 'rb')}
             # data = {'file': io.BytesIO(images[page].tobytes())}
 
