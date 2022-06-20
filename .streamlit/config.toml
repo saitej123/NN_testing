@@ -7,8 +7,8 @@ textColor = "#ffffff"
 [global]
 dataFrameSerialization = "arrow"
 
-enableCORS = true
+enableCORS = false
 
-enableXsrfProtection = true
+enableXsrfProtection = false
 
 enableWebsocketCompression = false
