@@ -5,5 +5,4 @@ pandas
 opencv-python
 numpy
 Pillow
-warnings
 io
