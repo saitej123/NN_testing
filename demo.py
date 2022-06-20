@@ -34,9 +34,9 @@ st.markdown(
 )
 
 c1, _,_,_,_, c5 = st.columns(6)
-#c1.image("skense.jpg", width = 150)
-#c5.image("wns.png", width = 150)
-st.header("Nanonets API Demo")
+c1.image("skense.jpg", width = 150)
+c5.image("wns.png", width = 150)
+st.header("Invoice API Demo")
 uploaded_file = st.file_uploader('Choose your file', type=['jpg','jpeg','png','pdf'])
 col1, _ , col2 = st.columns([9,1,9])
 
@@ -46,11 +46,12 @@ if uploaded_file is not None:
         images = pdf2image.convert_from_bytes(uploaded_file.read(),poppler_path=r'.\poppler-0.68.0\bin')
         page = col1.selectbox('Select the page number', ( _ for _ in range(len(images))))
         with col1:
+            st.text("")
+            st.text("")
             st.image(images[page], use_column_width=True)
             images[page].save("input.jpg")
         with col2:
-            st.text("")
-            st.text("")
+            
             chk= st.checkbox("Show Results")
             st.text("")
             st.text("")
