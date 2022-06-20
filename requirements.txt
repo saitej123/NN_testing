@@ -3,6 +3,6 @@ streamlit
 pandas
 opencv-python
 numpy
-PIL
+pillow
 warnings
 io
