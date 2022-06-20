@@ -51,7 +51,8 @@ if uploaded_file is not None:
             st.image(images[page], use_column_width=True)
             images[page].save("input.jpg")
         with col2:
-            
+            st.text("")
+            st.text("")            
             chk= st.checkbox("Show Results")
             
             data = {'file': open("input.jpg", 'rb')}
@@ -79,10 +80,7 @@ if uploaded_file is not None:
 
         with col2:
             chk= st.checkbox("Show Results")
-            st.text("")
-            st.text("")
-            st.text("")
-            st.text("")
+           
             data = {'file': open("input.jpg", 'rb')}
             if chk:
                 output_df = format_response(api_output(data))
