@@ -1,8 +1,9 @@
-pip 
 pdf2image
 streamlit
 pandas
-opencv-python
+opencv-python-headless
 numpy
-Pillow
+pillow
+python-multipart
+Cython
 
