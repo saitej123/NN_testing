@@ -43,7 +43,7 @@ col1, _ , col2 = st.columns([9,1,9])
 
 if uploaded_file is not None:
     if uploaded_file.type == "application/pdf":
-        images = pdf2image.convert_from_bytes(uploaded_file.read(),poppler_path=r'./poppler-0.68.0/bin/')
+        images = pdf2image.convert_from_bytes(uploaded_file.read())
         page = col1.selectbox('Select the page number', ( _ for _ in range(len(images))))
         with col1:
             st.text("")
