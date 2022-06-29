@@ -43,7 +43,7 @@ col1, _ , col2 = st.columns([9,1,9])
 
 if uploaded_file is not None:
     if uploaded_file.type == "application/pdf":
-        images = pdf2image.convert_from_bytes(uploaded_file.read(),poppler_path=r'.\poppler-0.68.0\bin')
+        images = pdf2image.convert_from_bytes(uploaded_file.read(),poppler_path=r'./poppler-0.68.0/bin/')
         page = col1.selectbox('Select the page number', ( _ for _ in range(len(images))))
         with col1:
             st.text("")
@@ -52,9 +52,9 @@ if uploaded_file is not None:
             images[page].save("input.jpg")
         with col2:
             st.text("")
-            st.text("")            
+            st.text("")
             chk= st.checkbox("Show Results")
-            
+
             data = {'file': open("input.jpg", 'rb')}
             # data = {'file': io.BytesIO(images[page].tobytes())}
 
@@ -80,7 +80,7 @@ if uploaded_file is not None:
 
         with col2:
             chk= st.checkbox("Show Results")
-           
+
             data = {'file': open("input.jpg", 'rb')}
             if chk:
                 output_df = format_response(api_output(data))
